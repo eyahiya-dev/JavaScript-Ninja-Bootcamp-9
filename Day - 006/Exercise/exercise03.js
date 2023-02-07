@@ -39,6 +39,26 @@ printDay(41); // undefined
 
 */
 
+const weekDay = new Array();
+weekDay[1] = "Saturday";
+weekDay[2] = "Sunday";
+weekDay[3] = "Monday";
+weekDay[4] = "Tuesday";
+weekDay[5] = "Wednesday";
+weekDay[6] = "Thursday";
+weekDay[7] = "Friday";
+
+function printDay2(x) {
+  return weekDay[x];
+}
+console.log(printDay2(0));
+console.log(printDay2(1));
+console.log(printDay2(2));
+console.log(printDay2(3));
+console.log(printDay2(4));
+
+// another way
+
 function printDay() {
   const arr = [
     "Saterday",
@@ -56,6 +76,28 @@ console.log(printDay()[3]);
 console.log(printDay()[5]);
 console.log(printDay()[41]);
 
+// another way
+
+const weekDay2 = [
+  "Saturday",
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+];
+function printDay3(day) {
+  if (day > weekDay2.length + 1 || day < 1) {
+    return undefined;
+  } else {
+    return weekDay2[day - 1];
+  }
+}
+console.log(printDay3(4));
+console.log(printDay3(1));
+console.log(printDay3(44));
+
 /*
 
 // 6.Write down this function takes in one parameter (an array) and returns the last value in the array
@@ -70,7 +112,10 @@ lastElement([]); // undefined
 
 */
 
-// Facing problem
+
+
+
+
 
 /*
 // 7. write a function that return a object based on passed arguments. Returned object key must be x , y, z in order and value will be passed arguments order- 
