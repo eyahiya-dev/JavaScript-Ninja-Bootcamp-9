@@ -116,17 +116,26 @@ function lastElement(arr) {
   const lastElmn = arr[arr.length - 1];
   if (arr[arr.length - 1] >= 0) {
     return lastElmn;
-} else if (arr.length <= 0) {
+  } else if (arr.length <= 0) {
     return "Empty";
   }
 }
 
-console.log(lastElement([1,2,3,]));
-console.log(lastElement([1,2,3,7]));
+console.log(lastElement([1, 2, 3]));
+console.log(lastElement([1, 2, 3, 7]));
 console.log(lastElement([1]));
 console.log(lastElement([]));
 
 
+// another way
+
+function lastElement2(arr) {
+  return arr[arr.length - 1];
+}
+console.log(lastElement2([1, 2, 3, 4]));
+console.log(lastElement2([1, 2, 3]));
+console.log(lastElement2([]));
+console.log(lastElement2([1,2,3,"HI"]));
 
 
 /*
@@ -137,5 +146,3 @@ createObj('a','b', 'c') //{x: 'a', y: 'b', z:'c'}
 createObj('ab','bc', 'ca') //{x: 'ab', y: 'bc', z:'ca'}
 
 */
-
-// facing problem
