@@ -112,7 +112,19 @@ lastElement([]); // undefined
 
 */
 
+function lastElement(arr) {
+  const lastElmn = arr[arr.length - 1];
+  if (arr[arr.length - 1] >= 0) {
+    return lastElmn;
+} else if (arr.length <= 0) {
+    return "Empty";
+  }
+}
 
+console.log(lastElement([1,2,3,]));
+console.log(lastElement([1,2,3,7]));
+console.log(lastElement([1]));
+console.log(lastElement([]));
 
 
 
