@@ -146,3 +146,27 @@ createObj('a','b', 'c') //{x: 'a', y: 'b', z:'c'}
 createObj('ab','bc', 'ca') //{x: 'ab', y: 'bc', z:'ca'}
 
 */
+
+
+function createObj(m , n, o) {
+  const anObj = {
+    x: m,
+    y: n,
+    z: o,
+  }
+  return anObj;
+}
+console.log(createObj(1, 2, 3));
+console.log(createObj('a', 'b', 'c'));
+console.log(createObj('ab', 'bc', 'ca'));
+
+
+// another way
+
+function createObj2(a , b, c) {
+  const obj = { x: a, y: b, z: c }
+  console.log(obj);
+}
+createObj2(1, 2, 3);
+createObj2('a','b','c');
+createObj2('ab', 'bc', 'ca');
