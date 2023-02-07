@@ -1,5 +1,6 @@
 # JS Function
 
+Function is like a machine.
 JavaScript functions are used to perform operations. We can call JavaScript function many times to reuse the code.
 Probably function is one of the most used feature in Programming.
 
@@ -20,7 +21,7 @@ function name ( parameter1, parameter2, parameter3 )
 A parameter is a named variable passed into a function and An argument is a value (primitive or object) passed as input to a function.
 
 function square ( num ) {
-console.log( num * num );
+console.log( num \* num );
 }
 square(3)
 square(4)
