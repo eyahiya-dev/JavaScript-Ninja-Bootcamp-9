@@ -89,8 +89,6 @@ console.log(x == 10);
 console.log(x === 10);
 console.log(x != 10);
 
-
-
 // Logical Operator
 
 /*
@@ -104,9 +102,10 @@ Operator          -          Name               -        Example             -  
 
 */
 
+let e = 20;
 
+// logical && operator return TRUE when every parts of condition is true otherwise it return false.
+console.log(e > 10 && e != 20);
 
-
-
-
-
+// Logical OR operator return TRUE when any one part of conditon is true.When all part of conditon is false it return FALSE.
+console.log(e > 10 || e != 20);
