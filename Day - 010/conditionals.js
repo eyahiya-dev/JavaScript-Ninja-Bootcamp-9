@@ -11,16 +11,17 @@ if (studyLevel === "hard") {
 
 const age = 18;
 
-// if (age) {
-//     console.log('You can vote');
-// } else {
-//     console.log(`Your're not aligible for Vote`);
-// }
-if (age === 18) {
-  console.log("You can vote");
+if (age) {
+    console.log('You can vote');
 } else {
-  console.log(`Your're not aligible for Vote`);
+    console.log(`Your're not aligible for Vote`);
 }
+
+// if (age === 18) {
+//   console.log("You can vote");
+// } else {
+//   console.log(`Your're not aligible for Vote`);
+// }
 
 // SwichCase Conditional
 
@@ -39,4 +40,11 @@ switch (var1) {
 
 
 // Ternary operator
+// condition ? true : false ;
+
+const height = 5
+const result = height <= 6 && height >= 4 ? `your're average` : 'your short or long';
+console.log(result);
+
+
 
