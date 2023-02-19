@@ -128,6 +128,22 @@ const profile1 = {
   profession: "student and part time developer",
 };
 
-for (let property in profile1){
+for (let property in profile1) {
+  console.log(property);
   console.log(profile1[property]);
+}
+
+// For in vs for of loop
+// for in loop specially used for object and for of loop used for string and array.
+
+// for of loop
+
+const profile2 = ["yahya", 24, "developer"];
+const profile3 = "Yahya";
+for (element of profile2) {
+  console.log(element);
+}
+
+for (word of profile3) {
+  console.log(word);
 }
