@@ -152,3 +152,46 @@ const checkArray2 = {
 };
 console.log(Array.isArray(checkArray2));
 console.log(checkArray.reverse());
+
+// object properties in Js
+const obj = {
+  firstName: "Yahya",
+  lastName: "Mahmud",
+  profession: "Web Developer",
+  profile() {
+    return this.firstName + " " + this.lastName + " " + this.profession;
+  },
+};
+console.log("lastName" in obj);
+console.log("emial" in obj);
+
+if ("lastName" in obj) {
+  console.log("lastName is the valid property");
+} else {
+  console.log("lastName is not valid property");
+}
+
+for (let prop in obj) {
+  console.log(obj[prop]);
+}
+
+const keys = Object.keys(obj);
+console.log(keys);
+const values = Object.values(obj);
+console.log(values);
+
+for (let elm of keys) {
+  console.log(obj[elm]);
+}
+for (let value of values) {
+  console.log(value);
+}
+console.log(Object.entries(obj));
+
+const entry = Object.entries(obj);
+for (let [hello,World] of entry) {  
+//   console.log(info); 
+  console.log(obj[hello]); 
+//   console.log(obj[World]); 
+   
+}
