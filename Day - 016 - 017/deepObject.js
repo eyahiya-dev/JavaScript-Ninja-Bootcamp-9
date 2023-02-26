@@ -111,9 +111,62 @@ function Profile(firstName, lastName, email) {
   this.lastName = lastName;
   this.email = email;
   this.fullName = function () {
-    return this.firstName + " " + this.lastName;  
+    return this.firstName + " " + this.lastName;
   };
 }
 const name1 = new Profile("yahya", "mahmud", "eyahiya@gmail.com");
 console.log(name1.fullName());
 
+// Copy by value (Primitive data)
+const a = 20;
+let b = a;
+console.log(a, b); // here b adopt value from a
+b = 50;
+console.log(a, b);
+b = 100;
+console.log(b, a);
+
+// Copy by reference (complex data type)
+const aObj = {
+  name: "Yahya",
+};
+const bObj = aObj;
+// console.log(bObj);
+bObj.name = "Mahmud";
+// console.log(bObj);
+bObj.email = "eyahiya@gmail.com";
+console.log(aObj, bObj);
+
+// copy object
+
+// assign  -> ( Shallow Copy )
+// spread operator (...)  -> ( Shallow Copy )
+// JSON.stringify()  -> ( Deep Copy )
+
+const mainProfile = {
+  name: "Yahya",
+  email: "mahmud@live.com",
+  profession: "developer",
+  address: {
+    city: "Dhaka",
+    country: "Bangladesh",
+  },
+  fullDetails() {
+    return this.name + " " + this.email + " " + this.profession;
+  },
+};
+
+//using assing() for shallow copy
+
+const copiedProfile = Object.assign({ number: 123456 }, mainProfile);
+console.log(copiedProfile);
+console.log(copiedProfile.fullDetails());
+
+// using JSON.stringify() for deep copy of a object
+
+let secondCopiedProfile = JSON.stringify(mainProfile);
+secondCopiedProfile = JSON.parse(secondCopiedProfile);
+secondCopiedProfile.address.city = "Barlin";
+secondCopiedProfile.address.country = "Germany";
+console.log(secondCopiedProfile);
+console.log(mainProfile);
